@@ -79,3 +79,8 @@ Route::get('paises', function(){
 		//con la funcion view
 		return view('paises')->with("paises", $paises );
 });
+
+//rutas de controlador
+route::get('artistas', "ArtistaController@index");
+Route::get('artistas/create' , 'ArtistaController@create' );
+Route::post('artistas/store', 'ArtistaController@store');
